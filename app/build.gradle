@@ -13,7 +13,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
-                arguments "-DANDROID_TOOLCHAIN=clang", "ANDROID_LD=lld"
+                arguments "-DANDROID_TOOLCHAIN=clang", "-DANDROID_LD=lld"
                 cppFlags "-std=c++11"
             }
             ndk {
