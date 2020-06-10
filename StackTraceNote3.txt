@@ -1,0 +1,31 @@
+D:\SampleProjects\CrashDump>adb logcat | D:\DevTools\Android\android-sdk\ndk-bundle\ndk-stack.cmd -sym .\app\build\intermediates\cmake\debug\obj\armeabi-v7a
+********** Crash dump: **********
+Build fingerprint: 'samsung/hltexx/hlte:5.0/LRX21V/N9005XXUGBNL8:user/release-keys'
+#00 0x00037978 /system/lib/libc.so (tgkill+12)
+#01 0x00013fd1 /system/lib/libc.so (pthread_kill+52)
+#02 0x00014bef /system/lib/libc.so (raise+10)
+#03 0x00011531 /system/lib/libc.so (__libc_android_abort+36)
+#04 0x0000fcbc /system/lib/libc.so (abort+4)
+#05 0x00000169 /data/app/com.sample.CrashDump-2/lib/arm/libnative-lib.so
+??
+??:0:0
+#06 0x000000cf /data/app/com.sample.CrashDump-2/lib/arm/libnative-lib.so
+??
+??:0:0
+#07 0x00000057 /data/app/com.sample.CrashDump-2/lib/arm/libnative-lib.so (Java_com_sample_CrashDump_MainActivity_stringFromJNI+18)
+                                                                          ??
+                                                                          ??:0:0
+#08 0x001e9663 /data/dalvik-cache/arm/data@app@com.sample.CrashDump-2@base.apk@classes.dex
+Crash dump is completed
+
+********** Crash dump: **********
+Build fingerprint: 'samsung/hltexx/hlte:5.0/LRX21V/N9005XXUGBNL8:user/release-keys'
+Traceback (most recent call last):
+  File "D:\DevTools\Android\android-sdk\ndk-bundle\prebuilt\windows-x86_64\bin\ndk-stack.py", line 418, in <module>
+    main(sys.argv[1:])
+  File "D:\DevTools\Android\android-sdk\ndk-bundle\prebuilt\windows-x86_64\bin\ndk-stack.py", line 359, in main
+    line = line.rstrip()
+KeyboardInterrupt
+^CTerminate batch job (Y/N)?
+
+D:\SampleProjects\CrashDump>
