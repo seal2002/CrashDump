@@ -1,14 +1,14 @@
-D:\SampleProjects\CrashDump>adb logcat | D:\DevTools\Android\android-sdk\ndk-bundle\ndk-stack.cmd -sym .\app\build\intermediates\cmake\debug\obj\arm64-v8a
+D:\SampleProjects\CrashDump>adb logcat | D:\DevTools\Android\android-ndk-r21c\ndk-stack.cmd -sym .\app\build\intermediates\cmake\debug\obj\arm64-v8a
 ********** Crash dump: **********
 Build fingerprint: 'samsung/a50dtvvj/a50:10/QP1A.190711.020/A505GTUBU5BTC8:user/release-keys'
 #00 0x0000000000083134 /apex/com.android.runtime/lib64/bionic/libc.so (abort+160) (BuildId: ecce0f8f6d05a6808531d834fd5e2b07)
-#01 0x000000000000eab0 /data/app/com.sample.CrashDump-0t0wo1vseboVQ_BpXR9q-Q==/lib/arm64/libnative-lib.so (BuildId: 8432bbb3ec0b00df09d288e363bb72d7c335d41b)
+#01 0x0000000000017230 /data/app/com.sample.CrashDump-qtdjy7oopRi59CBSrTJc-g==/lib/arm64/libnative-lib.so (BuildId: 9233f8c09735ef70614a0f0ea4d934f74b151678)
                                                                                                            makeCrash()::$_0::operator()() const
                                                                                                            ??:0:0
-#02 0x000000000000e9ac /data/app/com.sample.CrashDump-0t0wo1vseboVQ_BpXR9q-Q==/lib/arm64/libnative-lib.so (BuildId: 8432bbb3ec0b00df09d288e363bb72d7c335d41b)
+#02 0x000000000001712c /data/app/com.sample.CrashDump-qtdjy7oopRi59CBSrTJc-g==/lib/arm64/libnative-lib.so (BuildId: 9233f8c09735ef70614a0f0ea4d934f74b151678)
                                                                                                            makeCrash()
                                                                                                            ??:0:0
-#03 0x000000000000e8e4 /data/app/com.sample.CrashDump-0t0wo1vseboVQ_BpXR9q-Q==/lib/arm64/libnative-lib.so (Java_com_sample_CrashDump_MainActivity_stringFromJNI+40) (BuildId: 8432bbb3ec0b00df09d288e363bb72d7c335d41b)
+#03 0x0000000000017064 /data/app/com.sample.CrashDump-qtdjy7oopRi59CBSrTJc-g==/lib/arm64/libnative-lib.so (Java_com_sample_CrashDump_MainActivity_stringFromJNI+40) (BuildId: 9233f8c09735ef70614a0f0ea4d934f74b151678)
                                                                                                            Java_com_sample_CrashDump_MainActivity_stringFromJNI
                                                                                                            ??:0:0
 #04 0x0000000000140350 /apex/com.android.runtime/lib64/libart.so (art_quick_generic_jni_trampoline+144) (BuildId: 9ff25b7748fa5d941949972f38f5eca5)
@@ -18,7 +18,7 @@ Build fingerprint: 'samsung/a50dtvvj/a50:10/QP1A.190711.020/A505GTUBU5BTC8:user/
 #08 0x00000000002dbfb0 /apex/com.android.runtime/lib64/libart.so (bool art::interpreter::DoCall<false, false>(art::ArtMethod*, art::Thread*, art::ShadowFrame&, art::Instruction const*, unsigned short, art::JValue*)+912) (BuildId: 9ff25b7748fa5d941949972f38f5eca5)
 #09 0x000000000059a0b0 /apex/com.android.runtime/lib64/libart.so (MterpInvokeVirtual+648) (BuildId: 9ff25b7748fa5d941949972f38f5eca5)
 #10 0x0000000000131814 /apex/com.android.runtime/lib64/libart.so (mterp_op_invoke_virtual+20) (BuildId: 9ff25b7748fa5d941949972f38f5eca5)
-#11 0x000000000011d92c [anon:dalvik-classes.dex extracted in memory from /data/app/com.sample.CrashDump-0t0wo1vseboVQ_BpXR9q-Q==/base.apk] (com.sample.CrashDump.MainActivity.onCreate+36)
+#11 0x000000000011d92c [anon:dalvik-classes.dex extracted in memory from /data/app/com.sample.CrashDump-qtdjy7oopRi59CBSrTJc-g==/base.apk] (com.sample.CrashDump.MainActivity.onCreate+36)
 #12 0x000000000059a3c0 /apex/com.android.runtime/lib64/libart.so (MterpInvokeVirtual+1432) (BuildId: 9ff25b7748fa5d941949972f38f5eca5)
 #13 0x0000000000131814 /apex/com.android.runtime/lib64/libart.so (mterp_op_invoke_virtual+20) (BuildId: 9ff25b7748fa5d941949972f38f5eca5)
 #14 0x00000000001b01de /system/framework/framework.jar (android.app.Activity.performCreate+30)
@@ -87,9 +87,11 @@ Build fingerprint: 'samsung/a50dtvvj/a50:10/QP1A.190711.020/A505GTUBU5BTC8:user/
 Crash dump is completed
 
 Traceback (most recent call last):
-  File "D:\DevTools\Android\android-sdk\ndk-bundle\prebuilt\windows-x86_64\bin\ndk-stack.py", line 418, in <module>
+  File "D:\DevTools\Android\android-ndk-r21c\prebuilt\windows-x86_64\bin\ndk-stack.py", line 418, in <module>
     main(sys.argv[1:])
-^  File "D:\DevTools\Android\android-sdk\ndk-bundle\prebuilt\windows-x86_64\bin\ndk-stack.py", line 359, in main
-C    line = line.rstrip()
+  File "D:\DevTools\Android\android-ndk-r21c\prebuilt\windows-x86_64\bin\ndk-stack.py", line 359, in main
+    line = line.rstrip()
 KeyboardInterrupt
-Terminate batch job (Y/N)?
+^CTerminate batch job (Y/N)?
+
+D:\SampleProjects\CrashDump>
